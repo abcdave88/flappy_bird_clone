@@ -14,7 +14,12 @@ var main_state = {
     },
 
     create: function() { 
-    	// Fuction called after 'preload' to setup the game    
+    	// Fuction called after 'preload' to setup the game  
+      //Displays bird on screen
+      this.bird = this.game.add.sprite(100, 245, 'bird');
+
+      //Add gravity to make the bird fall
+      this.bird.body.gravity.y= 1000;  
     },
     
     update: function() {
