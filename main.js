@@ -11,6 +11,9 @@ var main_state = {
 
     //Load the bird sprite
     this.game.load.image('bird', 'assets/bird.png')
+
+    //Load the pipe sprite
+    this.game.load.image('pipe', 'assets/pipe.png');
     },
 
     create: function() { 
