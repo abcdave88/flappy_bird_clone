@@ -19,12 +19,22 @@ var main_state = {
       this.bird = this.game.add.sprite(100, 245, 'bird');
 
       //Add gravity to make the bird fall
-      this.bird.body.gravity.y= 1000;  
+      this.bird.body.gravity.y= 1000; 
+
+      //call the jump function when the space bar is hit
+      var space_key = this.game.input.keyboard.addkey(Phaser.Keyboard.SPACEBAR);
+       
     },
     
     update: function() {
 		// Function called 60 times per second
     },
+
+    //Make the bird jump
+    jump: function(){
+    //add vertical velocity to the bird
+      this.bird.body.y = -350;
+    }
 };
 
 // Add and start the 'main' state to start the game
