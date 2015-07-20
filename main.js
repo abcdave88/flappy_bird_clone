@@ -28,12 +28,22 @@ var main_state = {
     
     update: function() {
 		// Function called 60 times per second
+    //if the bird is out the world call restart_game
+      if (this.bird.inWorld == false){
+        this.restart_game();
+      }
     },
 
     //Make the bird jump
     jump: function(){
     //add vertical velocity to the bird
       this.bird.body.velocity.y = -350;
+    },
+
+    //Restart the game
+    restart_game: function(){
+      //Start the main state which restarts the game
+      this.game.state.start('main');
     }
 };
 
