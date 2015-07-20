@@ -21,6 +21,10 @@ var main_state = {
       //Displays bird on screen
       this.bird = this.game.add.sprite(100, 245, 'bird');
 
+      //Create a group of pipes
+      this.pipes = game.add.group();
+      this.pipes.createMultiple(20, 'pipe')
+
       //Add gravity to make the bird fall
       this.bird.body.gravity.y= 1000; 
 
