@@ -22,8 +22,8 @@ var main_state = {
       this.bird.body.gravity.y= 1000; 
 
       //call the jump function when the space bar is hit
-      var space_key = this.game.input.keyboard.addkey(Phaser.Keyboard.SPACEBAR);
-       
+      var space_key = this.game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR);
+      space_key.onDown.add(this.jump, this);
     },
     
     update: function() {
@@ -33,7 +33,7 @@ var main_state = {
     //Make the bird jump
     jump: function(){
     //add vertical velocity to the bird
-      this.bird.body.y = -350;
+      this.bird.body.velocity.y = -350;
     }
 };
 
